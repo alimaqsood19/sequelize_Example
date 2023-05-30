@@ -21,6 +21,13 @@ Landscape.init(
         },
         squareFootage: {
             type: DataTypes.DOUBLE
+        },
+        user_id: {
+            type: DataTypes.INTEGER, //data type
+            references: { //specifically responsible for creating the association
+                model: 'users', //table I want to associate to
+                key: 'id' //primary key column I want referenced
+            }
         }
     },
     {
